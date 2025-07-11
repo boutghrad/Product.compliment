@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكمل زيادة الوزن الطبيعي - اكتسب كتلة عضلية صحية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark), #1a2530);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo i {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin: 4rem 0;
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2:after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* Product Gallery */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 1rem;
+            background: white;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        /* Product Info */
+        .product-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .product-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .product-details h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .features {
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .feature i {
+            color: var(--secondary);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Benefits */
+        .benefits {
+            background-color: var(--light);
+            padding: 4rem 2rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            color: var(--light);
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 1rem;
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .testimonial-info .stars {
+            color: gold;
+        }
+        
+        /* Scientific Proof */
+        .proof {
+            background: linear-gradient(135deg, var(--dark), #1a2530);
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .proof-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .certificates {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .certificate {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 150px;
+        }
+        
+        .certificate i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            background: #f8f9fa;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* Contact */
+        .contact {
+            background-color: var(--light);
+            padding: 4rem 2rem;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-method i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: right;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-section h3:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -8px;
+            right: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .product-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-weight"></i>
+            <span>مكملات الوزن المثالي</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#product">المنتج</a></li>
+                <li><a href="#benefits">الفوائد</a></li>
+                <li><a href="#testimonials">تجارب العملاء</a></li>
+                <li><a href="#faq">الأسئلة الشائعة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>احصل على الوزن المثالي بسرعة وأمان مع منتجنا الطبيعي!</h1>
+        <p>المكمل الغذائي الأكثر فعالية لزيادة الوزن بشكل صحي وبناء العضلات دون آثار جانبية</p>
+        <a href="#order" class="cta-button">اطلب الآن واحصل على خصم 20%</a>
+    </section>
+
+    <!-- Product Gallery -->
+    <section id="product" class="container">
+        <div class="section-title">
+            <h2>معرض صور المنتج</h2>
+        </div>
+        
+        <div class="product-gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="صورة المنتج">
+                <div class="gallery-caption">المنتج من الزوايا المختلفة</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="صور قبل وبعد">
+                <div class="gallery-caption">نتائج العملاء قبل وبعد</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="مكونات المنتج">
+                <div class="gallery-caption">المكونات الطبيعية الفعالة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Information -->
+    <section class="container">
+        <div class="product-info">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="مكمل زيادة الوزن">
+            </div>
+            <div class="product-details">
+                <h3>مكمل زيادة الوزن الطبيعي</h3>
+                <p>مكمل غذائي طبيعي 100% مصمم خصيصًا لمساعدتك على اكتساب الوزن بشكل صحي وآمن. يعمل المنتج على تحسين الشهية وزيادة امتصاص العناصر الغذائية وبناء كتلة عضلية خالية من الدهون.</p>
+                
+                <div class="features">
+                    <h4>المكونات الرئيسية:</h4>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>خلاصة الجينسنغ لزيادة الطاقة والحيوية</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>بروتين القمح لبناء العضلات</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>فيتامينات ب المركبة لتحسين التمثيل الغذائي</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>الأحماض الأمينية الأساسية لتجديد الخلايا</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>مستخلصات طبيعية لفتح الشهية</span>
+                    </div>
+                </div>
+                
+                <div class="usage">
+                    <h4>طريقة الاستخدام:</h4>
+                    <p>تناول كبسولتين مرتين يوميًا قبل الوجبات الرئيسية بـ 30 دقيقة مع كوب من الماء. للحصول على أفضل النتائج، يوصى باستخدام المنتج لمدة 3 أشهر متواصلة.</p>
+                </div>
+                
+                <a href="#order" class="cta-button">اطلب الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>فوائد المنتج الرئيسية</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-weight"></i>
+                    <h3>زيادة الوزن بشكل صحي</h3>
+                    <p>اكتساب وزن صحي دون تراكم الدهون الضارة في الجسم</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>تحسين الشهية</h3>
+                    <p>فتح الشهية بشكل طبيعي وتنظيم عملية الهضم</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>بناء العضلات</h3>
+                    <p>زيادة الكتلة العضلية وتحسين القوة البدنية</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>نتائج سريعة</h3>
+                    <p>ملاحظة النتائج خلال الأسابيع الأولى من الاستخدام</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>مناسب للجميع</h3>
+                    <p>للرجال والنساء من مختلف الأعمار</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>طبيعي وآمن</h3>
+                    <p>خالي من المواد الكيميائية والهرمونات الضارة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <div class="section-title">
+            <h2>تجارب العملاء</h2>
+        </div>
+        
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عميل">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>محمد أحمد</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"بعد معاناة طويلة مع النحافة، جربت هذا المنتج بناء على توصية صديق. خلال شهرين فقط زاد وزني 8 كيلوغرامات بشكل صحي. أشعر الآن بطاقة أكبر وثقة أعلى في نفسي."</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="عميل">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>سارة خالد</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"كنت أعاني من نقص الوزن بعد الولادة، المنتج ساعدني على استعادة وزني الطبيعي خلال 3 أشهر. ما أحبه أنه طبيعي وآمن ولا يسبب أي آثار جانبية."</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="عميل">
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>علي حسن</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"كرياضي محترف، كنت أبحث عن مكمل طبيعي لزيادة الكتلة العضلية. هذا المنتج فاق توقعاتي، زادت قوتي وكتلتي العضلية بشكل ملحوظ دون أي مواد ضارة."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Proof Section -->
+    <section class="proof">
+        <div class="container">
+            <div class="proof-content">
+                <div class="section-title">
+                    <h2>إثباتات علمية وطبية</h2>
+                </div>
+                
+                <p>يستند منتجنا إلى أبحاث علمية موثقة ودراسات سريرية تؤكد فعاليته في زيادة الوزن بشكل صحي. تم تطويره بالتعاون مع أخصائيي التغذية وأطباء الغدد الصماء لضمان أقصى فاعلية وأمان.</p>
+                
+                <div class="certificates">
+                    <div class="certificate">
+                        <i class="fas fa-certificate"></i>
+                        <div>ISO 9001</div>
+                    </div>
+                    <div class="certificate">
+                        <i class="fas fa-flask"></i>
+                        <div>اختبارات معملية</div>
+                    </div>
+                    <div class="certificate">
+                        <i class="fas fa-heart"></i>
+                        <div>موافقة وزارة الصحة</div>
+                    </div>
+                    <div class="certificate">
+                        <i class="fas fa-leaf"></i>
+                        <div>طبيعي 100%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="container">
+        <div class="section-title">
+            <h2>اطلب المنتج الآن</h2>
+        </div>
+        
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">عروض خاصة لفترة محدودة!</h3>
+            <p style="margin-bottom: 2rem;">احصل على خصم 20% عند الطلب الآن + شحن مجاني لجميع أنحاء المملكة</p>
+            
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">عبوة واحدة</h4>
+                    <div style="font-size: 2rem; color: var(--accent); font-weight: bold; margin-bottom: 1rem;">199 ر.س</div>
+                    <div style="text-decoration: line-through; color: #777; margin-bottom: 1rem;">249 ر.س</div>
+                    <a href="#" class="cta-button">اطلب الآن</a>
+                </div>
+                
+                <div style="background: var(--primary); color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">3 عبوات</h4>
+                    <div style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">499 ر.س</div>
+                    <div style="text-decoration: line-through; margin-bottom: 1rem;">747 ر.س</div>
+                    <a href="#" class="cta-button" style="background: white; color: var(--primary);">وفر 33%</a>
+                    <div style="margin-top: 1rem; background: var(--accent); padding: 5px 10px; border-radius: 20px; display: inline-block;">الأكثر طلبًا</div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">6 عبوات</h4>
+                    <div style="font-size: 2rem; color: var(--accent); font-weight: bold; margin-bottom: 1rem;">899 ر.س</div>
+                    <div style="text-decoration: line-through; color: #777; margin-bottom: 1rem;">1494 ر.س</div>
+                    <a href="#" class="cta-button">وفر 40%</a>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem;"><i class="fas fa-shield-alt" style="color: var(--secondary);"></i> ضمان استرداد الأموال خلال 30 يومًا إذا لم تكن راضيًا عن النتائج</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container">
+        <div class="section-title">
+            <h2>الأسئلة الشائعة</h2>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل هناك أي آثار جانبية للمنتج؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>لا، المنتج طبيعي 100% وخالي من المواد الكيميائية والهرمونات الضارة. تم اختباره معمليًا وثبت أنه آمن للاستخدام ولا يسبب أي آثار جانبية.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>متى تظهر النتائج المتوقعة؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>معظم المستخدمين يلاحظون تحسنًا في الشهية والطاقة خلال الأسبوع الأول. تبدأ نتائج زيادة الوزن في الظهور بعد 2-3 أسابيع من الاستخدام المنتظم، مع نتائج ملحوظة بعد شهرين.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل المنتج مناسب لجميع الأعمار؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، المنتج مناسب للبالغين من سن 18 سنة فما فوق. لا ينصح باستخدامه للأطفال دون استشارة الطبيب.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكن استخدام المنتج مع أدوية أخرى؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، المنتج طبيعي وآمن ولا يتعارض مع الأدوية. مع ذلك، ننصح باستشارة الطبيب في حالة استخدام أدوية لأمراض مزمنة.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ما هي مدة الشحن والتوصيل؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>يتم الشحن خلال 24 ساعة من الطلب، وتصل الطلبات إلى معظم مناطق المملكة خلال 2-5 أيام عمل. الشحن مجاني لجميع الطلبات داخل المملكة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تواصل معنا</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>نحن هنا لمساعدتك</h3>
+                    <p>لديك استفسار أو تحتاج إلى مساعدة؟ فريق خدمة العملاء متاح للرد على استفساراتك خلال 24 ساعة.</p>
+                    
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>واتساب</h4>
+                            <p>+966 55 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>هاتف</h4>
+                            <p>9200 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@idealweight.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>ساعات العمل</h4>
+                            <p>الأحد - الخميس: 8 صباحًا - 10 مساءً</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>أرسل رسالتك</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الجوال</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>مكملات الوزن المثالي</h3>
+                <p>نقدم حلولاً طبيعية وآمنة لزيادة الوزن وبناء الجسم المثالي، مع ضمان الجودة والفعالية.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#product">عن المنتج</a></li>
+                    <li><a href="#benefits">الفوائد</a></li>
+                    <li><a href="#testimonials">تجارب العملاء</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>معلومات الاتصال</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                    <li><i class="fas fa-phone"></i> 9200 12345</li>
+                    <li><i class="fab fa-whatsapp"></i> +966 55 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> info@idealweight.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; 2023 مكملات الوزن المثالي</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
